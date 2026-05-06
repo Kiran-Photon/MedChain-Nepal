@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>E-Pharmacy — MedChain Nepal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="icon" href="../455.jpeg" type="image/jpeg"/>
+</head>
+<body>
+
+<!-- MEDICINE BACKGROUND -->
+<div class="bg-pills">
+  <div class="bp" style="top:4%;left:3%;transform:rotate(-18deg)">💊</div>
+  <div class="bp" style="top:10%;right:6%;transform:rotate(12deg)">🧪</div>
+  <div class="bp" style="top:22%;left:14%;transform:rotate(30deg)">💉</div>
+  <div class="bp" style="top:30%;right:2%;transform:rotate(-8deg)">🩺</div>
+  <div class="bp" style="top:45%;left:1%;transform:rotate(22deg)">💊</div>
+  <div class="bp" style="top:50%;right:10%;transform:rotate(-25deg)">🧬</div>
+  <div class="bp" style="top:62%;left:8%;transform:rotate(-5deg)">🧪</div>
+  <div class="bp" style="top:68%;right:3%;transform:rotate(15deg)">💊</div>
+  <div class="bp" style="top:78%;left:2%;transform:rotate(-30deg)">💉</div>
+  <div class="bp" style="top:84%;right:8%;transform:rotate(8deg)">🩺</div>
+  <div class="bp" style="top:92%;left:12%;transform:rotate(20deg)">💊</div>
+  <div class="bp" style="top:6%;left:40%;transform:rotate(-10deg);font-size:50px">⚕</div>
+  <div class="bp" style="top:35%;left:48%;transform:rotate(18deg);font-size:45px">⚕</div>
+  <div class="bp" style="top:70%;left:44%;transform:rotate(-15deg);font-size:55px">⚕</div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="../index.html" class="nav-logo">
+    <img src="../455.jpeg" alt="MedChain Nepal logo" class="nav-logo-img"/>
+    <span>MedChain Nepal</span>
+  </a>
+  <div class="nav-menu">
+    <a href="../index.html" class="nav-link" data-page="index">◎ Home</a>
+    <a href="e-pharmacy.html" class="nav-link" data-page="e-pharmacy">� E-Pharmacy</a>
+    <a href="tracker.html" class="nav-link" data-page="tracker">🔍 Track Medicine</a>
+    <a href="about.html" class="nav-link" data-page="about">ℹ️ About</a>
+  </div>
+  <div class="nav-right">
+    <span class="network-badge">◎ Solana Devnet</span>
+    <button class="btn-solana" onclick="connectSolana()" id="solana-btn">Connect ◎</button>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<div class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-chip">Online Medicine Store · Verified & Authentic · On Solana</div>
+    <h1>Welcome to<br><em>E-Pharmacy Nepal</em></h1>
+    <p>Browse and purchase authentic medicines directly from verified pharmacies. Every product is blockchain-verified for your safety.</p>
+  </div>
+
+  <!-- SEARCH SECTION -->
+  <div style="margin:60px 0;padding:40px;background:var(--surface);border:1.5px solid var(--border);border-radius:18px;box-shadow:0 4px 20px rgba(0,100,200,0.08);">
+    <h2 style="font-family:var(--font-d);font-size:20px;font-weight:800;margin-bottom:24px;color:var(--text);text-align:center;">🔍 Find Your Medicine</h2>
+    <div style="display:flex;gap:12px;max-width:500px;margin:0 auto;">
+      <input type="text" id="medicine-search" placeholder="Search by name or type..." style="flex:1;padding:13px 18px;border:1.5px solid var(--border);border-radius:12px;font-family:var(--font-b);font-size:14px;transition:all 0.3s;" onfocus="this.style.borderColor='var(--solana)'"/>
+      <button class="btn" onclick="searchMedicines()" style="display:inline-flex;">Search</button>
+    </div>
+  </div>
+
+  <!-- FEATURED MEDICINES -->
+  <div style="margin:80px 0;">
+    <h2 style="font-family:var(--font-d);font-size:24px;font-weight:800;margin-bottom:40px;color:var(--text);text-align:center;">⭐ Featured Products</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
+      
+      <!-- Medicine Card 1 -->
+      <div style="background:var(--surface);border:1.5px solid var(--border);border-radius:16px;overflow:hidden;transition:all 0.3s;box-shadow:0 4px 16px rgba(0,100,200,0.06);" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 12px 32px rgba(20,241,149,0.12)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(0,100,200,0.06)'">
+        <div style="padding:28px 24px;">
+          <div style="font-size:48px;margin-bottom:16px;text-align:center;">💊</div>
+          <h3 style="font-family:var(--font-d);font-size:17px;font-weight:800;color:var(--text);margin-bottom:10px;text-align:center;">Aspirin 500mg</h3>
+          <p style="font-size:13px;color:var(--text2);margin-bottom:16px;line-height:1.7;text-align:center;">Effective pain reliever and anti-inflammatory medication.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+            <span style="font-family:var(--font-d);font-size:22px;font-weight:800;color:var(--solana);">₨299</span>
+            <span style="font-size:11px;background:var(--green-bg);color:var(--green);padding:6px 14px;border-radius:20px;font-weight:700;">✓ Verified</span>
+          </div>
+          <button onclick="addToCart('Aspirin 500mg', 299)" style="width:100%;padding:12px;background:var(--solana);color:#000;border:none;border-radius:10px;font-family:var(--font-d);font-weight:800;cursor:pointer;transition:all 0.2s;font-size:13px;">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Medicine Card 2 -->
+      <div style="background:var(--surface);border:1.5px solid var(--border);border-radius:16px;overflow:hidden;transition:all 0.3s;box-shadow:0 4px 16px rgba(0,100,200,0.06);" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 12px 32px rgba(20,241,149,0.12)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(0,100,200,0.06)'">
+        <div style="padding:28px 24px;">
+          <div style="font-size:48px;margin-bottom:16px;text-align:center;">💉</div>
+          <h3 style="font-family:var(--font-d);font-size:17px;font-weight:800;color:var(--text);margin-bottom:10px;text-align:center;">Ibuprofen 200mg</h3>
+          <p style="font-size:13px;color:var(--text2);margin-bottom:16px;line-height:1.7;text-align:center;">Fast-acting anti-inflammatory. Trusted by thousands.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+            <span style="font-family:var(--font-d);font-size:22px;font-weight:800;color:var(--solana);">₨249</span>
+            <span style="font-size:11px;background:var(--green-bg);color:var(--green);padding:6px 14px;border-radius:20px;font-weight:700;">✓ Verified</span>
+          </div>
+          <button onclick="addToCart('Ibuprofen 200mg', 249)" style="width:100%;padding:12px;background:var(--solana);color:#000;border:none;border-radius:10px;font-family:var(--font-d);font-weight:800;cursor:pointer;transition:all 0.2s;font-size:13px;">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Medicine Card 3 -->
+      <div style="background:var(--surface);border:1.5px solid var(--border);border-radius:16px;overflow:hidden;transition:all 0.3s;box-shadow:0 4px 16px rgba(0,100,200,0.06);" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 12px 32px rgba(20,241,149,0.12)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(0,100,200,0.06)'">
+        <div style="padding:28px 24px;">
+          <div style="font-size:48px;margin-bottom:16px;text-align:center;">🧪</div>
+          <h3 style="font-family:var(--font-d);font-size:17px;font-weight:800;color:var(--text);margin-bottom:10px;text-align:center;">Vitamin C 1000mg</h3>
+          <p style="font-size:13px;color:var(--text2);margin-bottom:16px;line-height:1.7;text-align:center;">Boost immunity with premium quality Vitamin C.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+            <span style="font-family:var(--font-d);font-size:22px;font-weight:800;color:var(--solana);">₨399</span>
+            <span style="font-size:11px;background:var(--green-bg);color:var(--green);padding:6px 14px;border-radius:20px;font-weight:700;">✓ Verified</span>
+          </div>
+          <button onclick="addToCart('Vitamin C 1000mg', 399)" style="width:100%;padding:12px;background:var(--solana);color:#000;border:none;border-radius:10px;font-family:var(--font-d);font-weight:800;cursor:pointer;transition:all 0.2s;font-size:13px;">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Medicine Card 4 -->
+      <div style="background:var(--surface);border:1.5px solid var(--border);border-radius:16px;overflow:hidden;transition:all 0.3s;box-shadow:0 4px 16px rgba(0,100,200,0.06);" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 12px 32px rgba(20,241,149,0.12)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(0,100,200,0.06)'">
+        <div style="padding:28px 24px;">
+          <div style="font-size:48px;margin-bottom:16px;text-align:center;">🩺</div>
+          <h3 style="font-family:var(--font-d);font-size:17px;font-weight:800;color:var(--text);margin-bottom:10px;text-align:center;">Paracetamol 650mg</h3>
+          <p style="font-size:13px;color:var(--text2);margin-bottom:16px;line-height:1.7;text-align:center;">Reliable fever and pain relief medication.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+            <span style="font-family:var(--font-d);font-size:22px;font-weight:800;color:var(--solana);">₨179</span>
+            <span style="font-size:11px;background:var(--green-bg);color:var(--green);padding:6px 14px;border-radius:20px;font-weight:700;">✓ Verified</span>
+          </div>
+          <button onclick="addToCart('Paracetamol 650mg', 179)" style="width:100%;padding:12px;background:var(--solana);color:#000;border:none;border-radius:10px;font-family:var(--font-d);font-weight:800;cursor:pointer;transition:all 0.2s;font-size:13px;">Add to Cart</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CATEGORIES -->
+  <div style="margin:80px 0;padding:48px 32px;background:var(--surface2);border:1.5px solid var(--border);border-radius:18px;">
+    <h2 style="font-family:var(--font-d);font-size:24px;font-weight:800;margin-bottom:36px;color:var(--text);text-align:center;">📁 Browse Categories</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:18px;">
+      <div style="padding:24px;background:var(--surface);border:1.5px solid var(--border);border-radius:14px;text-align:center;cursor:pointer;transition:all 0.3s;" onmouseover="this.style.borderColor='var(--solana)';this.style.transform='scale(1.05)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='scale(1)'">
+        <div style="font-size:40px;margin-bottom:12px;">💊</div>
+        <div style="font-family:var(--font-d);font-weight:800;color:var(--text);font-size:14px;">Pain Relief</div>
+      </div>
+      <div style="padding:24px;background:var(--surface);border:1.5px solid var(--border);border-radius:14px;text-align:center;cursor:pointer;transition:all 0.3s;" onmouseover="this.style.borderColor='var(--solana)';this.style.transform='scale(1.05)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='scale(1)'">
+        <div style="font-size:40px;margin-bottom:12px;">🧬</div>
+        <div style="font-family:var(--font-d);font-weight:800;color:var(--text);font-size:14px;">Vitamins</div>
+      </div>
+      <div style="padding:24px;background:var(--surface);border:1.5px solid var(--border);border-radius:14px;text-align:center;cursor:pointer;transition:all 0.3s;" onmouseover="this.style.borderColor='var(--solana)';this.style.transform='scale(1.05)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='scale(1)'">
+        <div style="font-size:40px;margin-bottom:12px;">🧪</div>
+        <div style="font-family:var(--font-d);font-weight:800;color:var(--text);font-size:14px;">Supplements</div>
+      </div>
+      <div style="padding:24px;background:var(--surface);border:1.5px solid var(--border);border-radius:14px;text-align:center;cursor:pointer;transition:all 0.3s;" onmouseover="this.style.borderColor='var(--solana)';this.style.transform='scale(1.05)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='scale(1)'">
+        <div style="font-size:40px;margin-bottom:12px;">🩺</div>
+        <div style="font-family:var(--font-d);font-weight:800;color:var(--text);font-size:14px;">Medical Supplies</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFO -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin:80px 0;">
+    <div style="background:var(--green-bg);border:1.5px solid var(--green);border-radius:16px;padding:32px 28px;text-align:center;">
+      <div style="font-size:44px;margin-bottom:16px;">✓</div>
+      <h3 style="font-family:var(--font-d);font-size:18px;font-weight:800;margin-bottom:12px;color:var(--green);">100% Verified</h3>
+      <p style="font-size:13px;color:var(--text2);line-height:1.8;">Every product is verified on Solana blockchain for complete authenticity and quality assurance.</p>
+    </div>
+    <div style="background:var(--amber-bg);border:1.5px solid var(--amber);border-radius:16px;padding:32px 28px;text-align:center;">
+      <div style="font-size:44px;margin-bottom:16px;">⚡</div>
+      <h3 style="font-family:var(--font-d);font-size:18px;font-weight:800;margin-bottom:12px;color:var(--amber);">Fast Delivery</h3>
+      <p style="font-size:13px;color:var(--text2);line-height:1.8;">Secure delivery to your doorstep within 24-48 hours with complete order tracking.</p>
+    </div>
+    <div style="background:var(--solana-light);border:1.5px solid rgba(20,241,149,0.3);border-radius:16px;padding:32px 28px;text-align:center;">
+      <div style="font-size:44px;margin-bottom:16px;">🔐</div>
+      <h3 style="font-family:var(--font-d);font-size:18px;font-weight:800;margin-bottom:12px;color:var(--solana);">Secure Checkout</h3>
+      <p style="font-size:13px;color:var(--text2);line-height:1.8;">Checkout securely with Solana wallet integration and enjoy a safe and trustworthy medicine order experience.</p>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div style="text-align:center;margin:60px 0;padding:40px;background:var(--solana-light);border:1px solid rgba(20,241,149,0.2);border-radius:14px;">
+    <h2 style="font-family:var(--font-d);font-size:24px;font-weight:800;margin-bottom:16px;color:var(--text);">Ready to Shop?</h2>
+    <p style="font-size:14px;color:var(--text2);margin-bottom:24px;max-width:400px;margin-left:auto;margin-right:auto;">Browse our complete selection of verified medicines and health products. Connect your Solana wallet to checkout securely.</p>
+    <button class="btn" onclick="connectSolana()">Connect Wallet & Checkout →</button>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>MedChain Nepal © 2026</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="tracker.html">Track Medicine</a>
+    <a href="#">Privacy Policy</a>
+  </div>
+  <p class="footer-note">Powered by Solana Devnet | IPFS Storage</p>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+// E-Pharmacy specific functions
+function searchMedicines() {
+  const query = document.getElementById('medicine-search').value;
+  if (query.trim()) {
+    alert(`🔍 Searching for: "${query}"\n\nIn production, this would search the Solana blockchain for matching medicines.`);
+  }
+}
+
+function addToCart(medicineName, price) {
+  alert(`✓ Added to Cart\n\n${medicineName}\nPrice: ₨${price}\n\nIn production, this would add items to your secure wallet and prepare for Solana checkout.`);
+}
+</script>
+
+</body>
+</html>

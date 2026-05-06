@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>About MedChain — Solana Medicine Tracker</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../css/style.css"/>  <link rel="icon" href="../455.jpeg" type="image/jpeg"/></head>
+<body>
+
+<!-- MEDICINE BACKGROUND -->
+<div class="bg-pills">
+  <div class="bp" style="top:4%;left:3%;transform:rotate(-18deg)">💊</div>
+  <div class="bp" style="top:10%;right:6%;transform:rotate(12deg)">🧪</div>
+  <div class="bp" style="top:22%;left:14%;transform:rotate(30deg)">💉</div>
+  <div class="bp" style="top:30%;right:2%;transform:rotate(-8deg)">🩺</div>
+  <div class="bp" style="top:45%;left:1%;transform:rotate(22deg)">💊</div>
+  <div class="bp" style="top:50%;right:10%;transform:rotate(-25deg)">🧬</div>
+  <div class="bp" style="top:62%;left:8%;transform:rotate(-5deg)">🧪</div>
+  <div class="bp" style="top:68%;right:3%;transform:rotate(15deg)">💊</div>
+  <div class="bp" style="top:78%;left:2%;transform:rotate(-30deg)">💉</div>
+  <div class="bp" style="top:84%;right:8%;transform:rotate(8deg)">🩺</div>
+  <div class="bp" style="top:92%;left:12%;transform:rotate(20deg)">💊</div>
+  <div class="bp" style="top:6%;left:40%;transform:rotate(-10deg);font-size:50px">⚕</div>
+  <div class="bp" style="top:35%;left:48%;transform:rotate(18deg);font-size:45px">⚕</div>
+  <div class="bp" style="top:70%;left:44%;transform:rotate(-15deg);font-size:55px">⚕</div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="../index.html" class="nav-logo">
+    <img src="../455.jpeg" alt="MedChain Nepal logo" class="nav-logo-img"/>
+    <span>MedChain Nepal</span>
+  </a>
+  <div class="nav-menu">
+    <a href="../index.html" class="nav-link" data-page="index">◎ Home</a>
+    <a href="e-pharmacy.html" class="nav-link" data-page="e-pharmacy">🛒 E-Pharmacy</a>
+    <a href="tracker.html" class="nav-link" data-page="tracker">🔍 Track Medicine</a>
+    <a href="about.html" class="nav-link" data-page="about">ℹ️ About</a>
+  </div>
+  <div class="nav-right">
+    <span class="network-badge">◎ Solana Devnet</span>
+    <button class="btn-solana" onclick="connectSolana()" id="solana-btn">Connect ◎</button>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<div class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>About <em>MedChain</em></h1>
+    <p>Protecting healthcare through blockchain transparency and immutable supply chain verification.</p>
+  </div>
+
+  <!-- CONTENT -->
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:30px;margin:40px 0;">
+    <h2 style="font-family:var(--font-d);font-size:20px;font-weight:800;margin-bottom:16px;color:var(--text);">🎯 Our Mission</h2>
+    <p style="font-size:14px;color:var(--text2);line-height:1.8;margin-bottom:20px;">MedChain is dedicated to combating counterfeit medicines by leveraging Solana blockchain technology. We provide transparent, immutable records of every medicine's journey from manufacturer to patient.</p>
+  </div>
+
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:30px;margin:40px 0;">
+    <h2 style="font-family:var(--font-d);font-size:20px;font-weight:800;margin-bottom:16px;color:var(--text);">⛓️ How It Works</h2>
+    <div style="display:grid;grid-template-columns:1fr;gap:16px;">
+      <div style="padding:16px;background:var(--surface2);border-radius:10px;border-left:3px solid var(--solana);">
+        <div style="font-weight:700;color:var(--solana);margin-bottom:4px;">1. Registration</div>
+        <p style="font-size:12px;color:var(--text2);">Every medicine is registered on Solana blockchain with cryptographic signatures.</p>
+      </div>
+      <div style="padding:16px;background:var(--surface2);border-radius:10px;border-left:3px solid var(--solana);">
+        <div style="font-weight:700;color:var(--solana);margin-bottom:4px;">2. Supply Chain Tracking</div>
+        <p style="font-size:12px;color:var(--text2);">Each transfer (manufacturer → distributor → pharmacy) is recorded on-chain.</p>
+      </div>
+      <div style="padding:16px;background:var(--surface2);border-radius:10px;border-left:3px solid var(--solana);">
+        <div style="font-weight:700;color:var(--solana);margin-bottom:4px;">3. Verification</div>
+        <p style="font-size:12px;color:var(--text2);">Customers verify medicine authenticity using QR codes and Solana transactions.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:30px;margin:40px 0;">
+    <h2 style="font-family:var(--font-d);font-size:20px;font-weight:800;margin-bottom:16px;color:var(--text);">🌐 Technology Stack</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+      <div style="padding:12px;background:var(--solana-light);border:1px solid rgba(20,241,149,0.2);border-radius:8px;font-size:12px;">
+        <strong>Blockchain:</strong> Solana Devnet
+      </div>
+      <div style="padding:12px;background:var(--solana-light);border:1px solid rgba(20,241,149,0.2);border-radius:8px;font-size:12px;">
+        <strong>Storage:</strong> IPFS
+      </div>
+      <div style="padding:12px;background:var(--solana-light);border:1px solid rgba(20,241,149,0.2);border-radius:8px;font-size:12px;">
+        <strong>Smart Contracts:</strong> Solana Programs
+      </div>
+      <div style="padding:12px;background:var(--solana-light);border:1px solid rgba(20,241,149,0.2);border-radius:8px;font-size:12px;">
+        <strong>Verification:</strong> QR Codes
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div style="text-align:center;margin:60px 0;padding:40px;background:var(--solana-light);border:1px solid rgba(20,241,149,0.2);border-radius:14px;">
+    <h2 style="font-family:var(--font-d);font-size:24px;font-weight:800;margin-bottom:16px;color:var(--text);">Start Tracking Today</h2>
+    <a href="tracker.html" class="btn">Track Your Medicine →</a>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>MedChain Nepal © 2026</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="e-pharmacy.html">E-Pharmacy</a>
+    <a href="#">Privacy Policy</a>
+  </div>
+  <p class="footer-note">Powered by Solana Devnet | IPFS Storage</p>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Track Medicine — MedChain Nepal</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../css/style.css"/>  <link rel="icon" href="../455.jpeg" type="image/jpeg"/></head>
+<body>
+
+<!-- MEDICINE BACKGROUND -->
+<div class="bg-pills">
+  <div class="bp" style="top:4%;left:3%;transform:rotate(-18deg)">💊</div>
+  <div class="bp" style="top:10%;right:6%;transform:rotate(12deg)">🧪</div>
+  <div class="bp" style="top:22%;left:14%;transform:rotate(30deg)">💉</div>
+  <div class="bp" style="top:30%;right:2%;transform:rotate(-8deg)">🩺</div>
+  <div class="bp" style="top:45%;left:1%;transform:rotate(22deg)">💊</div>
+  <div class="bp" style="top:50%;right:10%;transform:rotate(-25deg)">🧬</div>
+  <div class="bp" style="top:62%;left:8%;transform:rotate(-5deg)">🧪</div>
+  <div class="bp" style="top:68%;right:3%;transform:rotate(15deg)">💊</div>
+  <div class="bp" style="top:78%;left:2%;transform:rotate(-30deg)">💉</div>
+  <div class="bp" style="top:84%;right:8%;transform:rotate(8deg)">🩺</div>
+  <div class="bp" style="top:92%;left:12%;transform:rotate(20deg)">💊</div>
+  <div class="bp" style="top:6%;left:40%;transform:rotate(-10deg);font-size:50px">⚕</div>
+  <div class="bp" style="top:35%;left:48%;transform:rotate(18deg);font-size:45px">⚕</div>
+  <div class="bp" style="top:70%;left:44%;transform:rotate(-15deg);font-size:55px">⚕</div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="../index.html" class="nav-logo">
+    <img src="../455.jpeg" alt="MedChain Nepal logo" class="nav-logo-img"/>
+    <span>MedChain Nepal</span>
+  </a>
+  <div class="nav-menu">
+    <a href="../index.html" class="nav-link" data-page="index">◎ Home</a>
+    <a href="e-pharmacy.html" class="nav-link" data-page="e-pharmacy">🛒 E-Pharmacy</a>
+    <a href="tracker.html" class="nav-link" data-page="tracker">🔍 Track Medicine</a>
+    <a href="about.html" class="nav-link" data-page="about">ℹ️ About</a>
+  </div>
+  <div class="nav-right">
+    <span class="network-badge">◎ Solana Devnet</span>
+    <button class="btn-solana" onclick="connectSolana()" id="solana-btn">Connect ◎</button>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<div class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-chip">Solana Blockchain · Real Devnet · Medicine Supply Chain</div>
+    <h1>Verify Your Medicine<br>on <em>Solana</em></h1>
+    <p>Enter a Medicine ID to trace its supply chain on Solana Devnet — from manufacturer to pharmacy with immutable blockchain verification.</p>
+
+    <div class="search-box">
+      <input id="inp" type="text" placeholder="Enter Medicine ID — e.g. MCN-1001"
+             autocomplete="off" onkeydown="if(event.key==='Enter')go()"/>
+      <button onclick="go()">Track ◎</button>
+    </div>
+    <div class="sample-row">
+      Try:
+      <span class="spill" onclick="fill('MCN-1001')">MCN-1001</span>
+      <span class="spill" onclick="fill('MCN-2042')">MCN-2042</span>
+      <span class="spill" onclick="fill('MCN-3041')">MCN-3041</span>
+      <span class="spill" onclick="fill('MCN-4099')">MCN-4099</span>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="scard">
+      <div class="scard-val">14,832</div>
+      <div class="scard-lbl">Medicines On Solana</div>
+    </div>
+    <div class="scard">
+      <div class="scard-val" style="color:var(--red)">248</div>
+      <div class="scard-lbl">Counterfeits Caught</div>
+    </div>
+    <div class="scard">
+      <div class="scard-val">37</div>
+      <div class="scard-lbl">Partner Pharmacies</div>
+    </div>
+  </div>
+
+  <!-- RESULT -->
+  <div id="out"></div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>MedChain Nepal © 2026</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="e-pharmacy.html">E-Pharmacy</a>
+    <a href="#">Privacy Policy</a>
+  </div>
+  <p class="footer-note">Powered by Solana Devnet | IPFS Storage</p>
+</footer>
+
+<script src="../js/main.js"></script>
+<script src="../js/medicine.js"></script>
+</body>
+</html>
